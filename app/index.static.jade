@@ -1,0 +1,196 @@
+doctype html
+html(lang='en')
+  head
+    title BVCA v2
+    meta(charset='utf-8')
+    //if IE
+      meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    //- link(rel='shortcut icon', type='image/x-icon', href='assets/favicon.ico')
+
+    //- link(type='text/css', rel='stylesheet', href="http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css")
+    link(type='text/css', rel='stylesheet', href='/css/app.css')
+
+    //- //if lte IE 7
+    //-   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/json2/20110223/json2.js"></script>
+
+    //if lte IE 8
+      <script type="text/javascript" src="/js/html5.js"></script>
+
+    //- script(type='text/javascript', src='http://code.jquery.com/jquery-1.11.0.min.js')
+    //- script(type='text/javascript', src='http://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js')
+    script(type='text/javascript', src='/js/vendor.js')
+    //- script(type='text/javascript', src='http://code.highcharts.com/highcharts.js')
+    //- script(type='text/javascript', src='http://code.highcharts.com/highcharts-more.js')
+    //- script(type='text/javascript', src='http://fb.me/react-0.9.0.js')
+
+
+    //begin-static-app-config
+    script(type='text/javascript').
+      window.config={"api":{"prefix": ""}}
+    //end-static-app-config
+    //app-config
+      <script type="text/javascript">window.config={{{app-config}}}</script>
+
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      if (window.config.ua && window.config.ua.code) {
+        ga('create', window.config.ua.code, 'trampolinesystems.com');
+        ga('send', 'pageview');
+      }
+
+  body.view-map
+
+    #page-info.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+            h4.
+              EU Startup Data
+          .modal-body
+            p.
+              EU Startup Data
+
+    #page-methodology.modal.fade
+      .modal-dialog
+        .modal-content
+          .modal-header
+            button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
+            h4.
+              Methodology
+          .modal-body
+            p.
+              Methodology
+
+    #wrap
+      aside#nav
+        ul
+          // li.search(data-toggle='tooltip' data-placement='right' title='Search for a Constituency or Company'): a(href='#') Search
+          // li.map.active(data-toggle='tooltip' data-placement='right' title='View on map'): a(href='#') Map
+          // li.lists(data-toggle='tooltip' data-placement='right' title='View full report'): a(href='#') Full Report
+          li.info(data-toggle='tooltip' data-placement='right' title='More Information')
+            a(data-toggle='modal' data-target='#page-info') Info
+          // li.method(data-toggle='tooltip' data-placement='right' title='Methodology')
+          //   a(data-toggle='modal' data-target='#page-methodology') Methodology
+          li.logo: a(href='#') EU
+
+      section#main
+        .container
+          header#main-header
+            // #search-component
+            //   #search
+            //     div.tbl
+            //       div.tbl-cell(style='width: 100%')
+            //         input(type='text', placeholder='Search')
+            //       //- NEW: width increased
+            //       div.tbl-cell(style='width: 38px')
+            //         button(type='reset').btn-clear &times;
+
+            //       //- NEW: Button moved below to "header.secondary"
+            //       //- div.tbl-cell(style='width: 136px')
+            //       //-   button(type='reset').btn-reset Reset to UK wide
+
+            //     #search-results.hide
+            //       ul
+            //         li
+            //           a(href='#')
+            //             | -
+            //             small Constituency
+            //         li
+            //           a(href='#')
+            //             | -
+            //             small Investor
+            //         li
+            //           a(href='#')
+            //             | -
+            //             small Investor-backed company
+            // #page-title-component
+            //   #page-title
+            //     button(type='button').btn View on map
+            //     // button(type='reset').btn.btn-link.btn-reset Reset to UK wide
+            //     h2 -
+            //     h3 -
+
+          #main-content
+
+            #page-map
+              #map-report.open
+                a(href='#')
+                  i Show / hide
+
+                aside
+                  header.primary
+                    h1 EU Startup Data
+                    h2 View startups across EU
+
+                  #map-report-component
+                    // header.secondary
+                    //   h2 -
+                    //   h3 -
+                    //   // button(type='reset').btn-reset Reset to UK wide
+
+                    // ul
+                    //   li
+                    //     | -
+                    //     small Investor-backed companies
+                    //   li
+                    //     | -
+                    //     small Investors
+                    //   li
+                    //     | -
+                    //     small Constituencies
+                    //   li
+                    //     | -
+                    //     small Total revenue
+                    //   li
+                    //     | -
+                    //     small Total employees
+
+                    // a(href='#')
+                    //   button(type='button').btn
+                    //     i.icon-lists-sm
+                    //     | Full report
+
+              #map-component
+
+            #page-lists
+              .inner
+                .div-scroll
+                  .div-fixed
+
+                    #full-report-component
+
+          footer#main-footer
+            .inner
+              .trampoline
+                p
+                  | Produced by&nbsp;
+                  a(href='http://www.trampolinesystems.com/') Trampoline Systems
+                  | &nbsp;and&nbsp;
+                  a(href='http://www.grantthornton.com/') Grant Thornton
+
+    //begin-static-base-js
+    script(type="text/javascript", src="cljs/goog/base.js")
+    //end-static-base-js
+    //base-js
+      {{{base-js}}}
+
+    //begin-dynamic-js
+    <script type="text/javascript" src="clustermap.js"></script><script type="text/javascript">goog.require("clustermap.core");</script>
+    //end-dynamic-js
+    //dynamic-js
+      <!-- <script type="text/javascript" src="clustermap.js"></script><script type="text/javascript">goog.require("clustermap.core");</script> -->
+
+    //begin-static-repl-js
+    //end-static-repl-js
+    //repl-js
+      <script type="text/javascript">{{{repl-js}}}</script>
+
+//end

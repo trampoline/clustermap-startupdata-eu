@@ -1,0 +1,39 @@
+{
+  "name": "rtree",
+  "version": "1.4.0",
+  "description": "rtree library for javascript",
+  "keywords": [
+    "rtree"
+  ],
+  "contributors": [
+    "Jon-Carlos Rivera <imbcmdth@hotmail.com> (https://github.com/imbcmdth/RTree)",
+    "Calvin Metcalf <calvin.metalf@gmail.com> (https://github.com/calvinmetcalf)"
+  ],
+  "bugs": {
+    "url": "https://github.com/leaflet-extras/RTree/issues"
+  },
+  "dependencies": {},
+  "license": "MIT",
+  "main": "./lib/rtree.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leaflet-extras/RTree.git"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-mocha-test": "~0.7.0",
+    "chai": "~1.8.0",
+    "grunt-browserify": "~1.2.8"
+  }
+}
