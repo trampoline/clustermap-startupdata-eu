@@ -108,5 +108,23 @@ if (typeof define === 'function' && define.amd) {
 }
 });
 
+;require.register("unsupported.static", function(exports, require, module) {
+var __templateData = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+
+buf.push("<!DOCTYPE html><html lang=\"en\"><head><title>EU Startup Data</title><meta charset=\"utf-8\"><!--if IEmeta(http-equiv=\"X-UA-Compatible\", content=\"IE=edge,chrome=1\")--><meta name=\"description\" content=\"EU Startup Data\"><meta name=\"author\" content=\"Trampoline Systems Limited\"><link type=\"text/css\" rel=\"stylesheet\" href=\"/css/app.css\"></head><body class=\"view-lists\"><div id=\"wrap\"><aside id=\"nav\"></aside><section id=\"main\"><div class=\"container\"><header id=\"main-header\"><div id=\"page-title-component\"><div id=\"page-title\"><h2>Unsupported Browser !</h2><h3>This browser (Internet Explorer < 9) is completely unsupported</h3></div></div></header><div id=\"main-content\"><div id=\"page-lists\"><div class=\"inner\"><div class=\"div-scroll\"><div class=\"div-fixed\"><div id=\"full-report-component\"><p>This browser is completely unsupported (Internet Explorer < 9): It will not work at all. Please try one of :</p><ul><li><a href=\"http://www.google.com/chrome/\">Chrome</a></li><li><a href=\"http://www.mozilla.org/en-US/firefox/new/\">Firefox</a></li><li><a href=\"http://windows.microsoft.com/en-my/windows-vista/update-internet-explorer\">Internet Explorer version 9 or greater</a></li></ul></div></div></div></div></div></div><footer id=\"main-footer\"><div class=\"inner\"><div class=\"trampoline\"><p>Produced by&nbsp;<a href=\"http://www.trampolinesystems.com/\">Trampoline Systems</a>&nbsp;and&nbsp;<a href=\"http://www.grantthornton.com/\">Grant Thornton</a></p></div></div></footer></div></section></div></body></html>");;return buf.join("");
+};
+if (typeof define === 'function' && define.amd) {
+  define([], function() {
+    return __templateData;
+  });
+} else if (typeof module === 'object' && module && module.exports) {
+  module.exports = __templateData;
+} else {
+  __templateData;
+}
+});
+
 ;
 //# sourceMappingURL=templates.js.map
