@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    title EU Startup Data
+    meta(charset='utf-8')
+    //if IE
+      meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name='description', content='EU Startup Data')
+    meta(name='author', content='Trampoline Systems Limited')
+    link(type='text/css', rel='stylesheet', href='/css/app.css')
+  body.view-lists
+    #wrap
+      aside#nav
+
+      section#main
+        .container
+          header#main-header
+            #page-title-component
+              #page-title
+                h2 Unsupported Browser !
+                h3 This browser (Internet Explorer < 9) is completely unsupported
+
+          #main-content
+            #page-lists
+              .inner
+               .div-scroll
+                 .div-fixed
+                   #full-report-component
+                     p This browser is completely unsupported (Internet Explorer < 9): It will not work at all. Please try one of :
+                     ul
+                       li: a(href='http://www.google.com/chrome/') Chrome
+                       li: a(href='http://www.mozilla.org/en-US/firefox/new/') Firefox
+                       li: a(href='http://windows.microsoft.com/en-my/windows-vista/update-internet-explorer') Internet Explorer version 9 or greater
+
+          footer#main-footer
+            .inner
+              .trampoline
+                p
+                  | Produced by&nbsp;
+                  a(href='http://www.trampolinesystems.com/') Trampoline Systems
+                  | &nbsp;and&nbsp;
+                  a(href='http://www.grantthornton.com/') Grant Thornton
