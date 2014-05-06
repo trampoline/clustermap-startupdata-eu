@@ -3023,15 +3023,15 @@ body.view-lists #search-results {
   padding: 10px 20px;
 }
 #map-report header.secondary h2 {
-  margin: 0;
+  margin: 0 0 0 0;
 }
 #map-report header.secondary h3 {
-  margin: 0;
+  margin: 0 0 0 0;
   font-size: 22px;
   line-height: 1;
 }
 #map-report header.secondary button {
-  margin-top: 8px;
+  margin-top: 10px;
 }
 #map-report ul,
 #map-report li {
