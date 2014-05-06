@@ -2969,7 +2969,7 @@ body.view-lists #search-results {
 #map-report {
   position: absolute;
   right: 0px;
-  width: 298px;
+  width: 328px;
   z-index: 1000;
 }
 #map-report > a {
@@ -3023,10 +3023,10 @@ body.view-lists #search-results {
   padding: 10px 20px;
 }
 #map-report header.secondary h2 {
-  margin: 0 0 0 0;
+  margin: 6px 0 0 0;
 }
 #map-report header.secondary h3 {
-  margin: 0 0 0 0;
+  margin: 8px 0 0 0;
   font-size: 22px;
   line-height: 1;
 }
